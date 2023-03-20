@@ -1,0 +1,377 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPVpZJavcI52qK3ISb6tOfd",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/MaluDeveloper/Aulas-Programacao/blob/main/Aula%20Listas%20e%20Lacos\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3npV4m9a-LTY",
+        "outputId": "0104a080-1152-4fe8-a789-192f42bd9672"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a idade do atleta:23\n",
+            "Sênior\n"
+          ]
+        }
+      ],
+      "source": [
+        "idade = int(input('Digite a idade do atleta:'))\n",
+        "if(idade< 14):\n",
+        "    print('Infantil')\n",
+        "elif(idade< 18):\n",
+        "    print('Juvenil')\n",
+        "else:\n",
+        "    print('Sênior')"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "  #Listas são estruturas de dados formados por elementos\n",
+        "  num = [25, 4, 3, 6, 9]"
+      ],
+      "metadata": {
+        "id": "2M9pLcXJ_8mE"
+      },
+      "execution_count": 6,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Tamho de uma lista\n",
+        "len(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GH8XR0x7Bo8R",
+        "outputId": "8abc630e-f008-4ccf-fdc4-8ed3e0f92c6a"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "5"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num[4]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k5bzKfpmCVhh",
+        "outputId": "5bdad92f-ea00-4870-c0a9-2205ff20e05a"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "9"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#listas de outros tipos\n",
+        "alunos = ['Malu', 'Allana', 'Micael', 'wesley', 'Pedro']\n",
+        "alunos[3]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "nBGOmuJcCGnZ",
+        "outputId": "975862d3-4f98-471e-b4ba-19cf8c1e4d7b"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'wesley'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#alterar os valores de itens na lista\n",
+        "alunos[3] = 'Ivan'"
+      ],
+      "metadata": {
+        "id": "D19LN8UIE0lH"
+      },
+      "execution_count": 23,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#Inserir valores na lista . append()\n",
+        "alunos.append('Alex')\n",
+        "alunos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2J4sn3fhF1lu",
+        "outputId": "cb85be30-755e-4242-f50c-a2a959c405c8"
+      },
+      "execution_count": 24,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Malu', 'Allana', 'Micael', 'Ivan', 'Pedro', 'Alex']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 24
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Descobrir se há um valor determinado na lista, exibir sua...\n",
+        "if 'Luiz' in alunos:\n",
+        "  print('Tem Luiz Sim!')\n",
+        "else: \n",
+        "  print('Tem Luiz Não!')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kTxihjrGNecp",
+        "outputId": "aa4b5410-9668-45e8-f552-f02c399d9a13"
+      },
+      "execution_count": 26,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Tem Luiz Não!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = input('Digite o nome:')\n",
+        "if nome in alunos:\n",
+        "  print('Tem nome!', nome)\n",
+        "else: \n",
+        "  print('Não tem!', nome)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WA8OYiPnPz5t",
+        "outputId": "5a6443ec-7605-4e48-ae58-93a4dfda693e"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o nome:Neto\n",
+            "Não tem! Neto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if(20 == 30):\n",
+        "  print('Iguais')\n",
+        "elif (20 == 10):\n",
+        "  print('Maior')\n",
+        "else:\n",
+        "  print('Menor')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "loo5VKTRO3dA",
+        "outputId": "b2bbfd6f-52f2-45d7-a7c1-b703240c21a3"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Menor\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Criar uma lista com números de 1 a 15\n",
+        "numeros = []\n",
+        "for num in range(20):\n",
+        "  numeros.append(num)\n",
+        "numeros   "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6zOhSRGzUIKD",
+        "outputId": "c6fb9b51-e7a5-47ac-89bf-4524a66ea08d"
+      },
+      "execution_count": 35,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 35
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dobro = []\n",
+        "for num in numeros:\n",
+        "  dobro.append(numeros[num]*2)\n",
+        "dobro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-CPueiz3WiAt",
+        "outputId": "21fcdde5-8188-4f5d-b763-79d4ec399fc1"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 36
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for num in numeros:\n",
+        "  if numeros[num]%2 == 0:\n",
+        "    print(numeros[num])\n",
+        "\n",
+        "\n",
+        "  "
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1RmQpJjzXP-W",
+        "outputId": "4e216679-52f1-41ca-8bb5-0a5da57f8f6e"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n",
+            "16\n",
+            "18\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
